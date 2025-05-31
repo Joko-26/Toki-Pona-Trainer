@@ -5,7 +5,7 @@ This website is made with Tanstack Router React for more informations on [TanSta
 ### **Important:**
 All the words and translations are stored in the `/src/routes/vocab.json` file and if the data struckture stays the same can be modified for other languages.
 
-### The Branch `gh-pages` contains the build website and is online at [Toki Pona Trainer](https://github.com/Joko-26/Toki-Pona-Trainer).
+### The Branch `gh-pages` contains the build website and is online at [Toki Pona Trainer](https://joko-26.github.io/Toki-Pona-Trainer/).
 
 ## To run this application run:
 
