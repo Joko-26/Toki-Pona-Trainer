@@ -2,7 +2,7 @@
 
 This website is made with Tanstack Router React for more informations on [TanStack documentation](https://tanstack.com) visit their website.
 
-**Important**
+##### **Important:**
 All the words and translations are stored in the `/src/routes/vocab.json` file and if the data struckture stays the same can be modified for other languages.
 
 # Getting Started
