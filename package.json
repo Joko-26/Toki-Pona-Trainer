@@ -8,8 +8,8 @@
     "build": "vite build && tsc",
     "serve": "vite preview",
     "test": "vitest run",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
+    "deploy": "gh-pages -d dist -b gh-pages --repo https://github.com/Joko-26/Toki-Pona-Trainer.git"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.114.3",

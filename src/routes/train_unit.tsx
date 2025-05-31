@@ -6,6 +6,7 @@ import {
 import vocabs from "./vocabs.json";
 import { useState, useEffect } from "react";
 
+// extrats the unit name from the url
 export const Route = createFileRoute("/train_unit")({
   validateSearch: (search: Record<string, unknown>) => ({
     unit: String(search.unit ?? ""),
@@ -31,6 +32,7 @@ function RouteComponent() {
   );
   const max_card = unit.length - 1;
 
+  // changes the word of the card from toki pona to germa/english and the other way around
   const flip_card = () => {
     if (isFront) {
       setCardText(translationsStringList[current_card]);
@@ -40,10 +42,12 @@ function RouteComponent() {
     setIsFront(!isFront);
   };
 
+  // sets the initial slide direction
   useEffect(() => {
     setSlideDirection("in");
   }, []);
 
+  // displays the text on the card
   useEffect(() => {
     if (isFront) {
       setCardText(tokiPonaList[current_card]);
@@ -52,27 +56,33 @@ function RouteComponent() {
     }
   }, [current_card, isFront, tokiPonaList, translationsStringList]);
 
-const next_card = () => {
-  setSlideDirection("out")
-  setTimeout(() => {
-    if (current_card < max_card) {
-      setCurrentCard(current_card + 1);
-      setIsFront(true)
-    } else {
-      navigate({ to: "/finish_unit", search: { unit: unit_name } });
-    }
-    setSlideDirection("in")
-  }, 300);
-};
+  // switches to the next card if there are words lef
+  const next_card = () => {
+    setSlideDirection("out")
+    setTimeout(() => {
+      if (current_card < max_card) {
+        setCurrentCard(current_card + 1);
+        setIsFront(true)
+      } else {
+        navigate({ to: "/finish_unit", search: { unit: unit_name } });
+      }
+      setSlideDirection("in")
+    }, 300);
+  };
+
   return (
     <div>
+      {/*back to the menu button*/}
       <button className="back-button" onClick={() => navigate({ to: "/" })}>
-        {" "}⬅ Back{" "}
+        {" "}⬅️ Back{" "}
       </button>
+      {/*renders card*/}
+      {/*triggers flip_card() when clicked*/}
       <div className="center-container">
         <div className={`big-card ${slideDirection}`} onClick={flip_card}>
           <span>{cardText}</span>
         </div>
+        {/*triggers next_card(*/}
         <button className="next-button" onClick={() => next_card()}>Next word ➡️</button>
       </div>
     </div>
