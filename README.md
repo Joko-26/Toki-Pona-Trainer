@@ -1,4 +1,4 @@
-# Toki Pona Trainer is an simple vocable trainer website for the micro language Toki Pona.
+# Toki Pona Trainer is an simple vocabulary trainer website for the micro language Toki Pona.
 
 This website is made with Tanstack Router React for more informations on [TanStack documentation](https://tanstack.com) visit their website.
 
