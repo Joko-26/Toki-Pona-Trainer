@@ -5,6 +5,7 @@ import {
 } from "@tanstack/react-router";
 import vocabs from "./vocabs.json";
 import { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 
 // extrats the unit name from the url
 export const Route = createFileRoute("/train_unit")({
@@ -72,6 +73,12 @@ function RouteComponent() {
 
   return (
     <div>
+      <Helmet>
+        <title>Toki Pona Vocab Trainer</title>
+        <meta name="description" content="Lerne Toki Pona Vokabeln mit diesem interaktiven Vokabeltrainer!" />
+        <link rel="icon" href="/Toki-Pona-Trainer/imgs/Toki_pona.svg.png" />
+        <link rel="apple-touch-icon" href="/Toki-Pona-Trainer/imgs/Toki_pona.svg.png" />
+      </Helmet>
       {/*back to the menu button*/}
       <button className="back-button" onClick={() => navigate({ to: "/" })}>
         {" "}⬅️ Back{" "}

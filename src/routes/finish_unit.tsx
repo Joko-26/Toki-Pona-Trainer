@@ -4,6 +4,7 @@ import {
   useNavigate,
 } from "@tanstack/react-router";
 import vocabs from "./vocabs.json";
+import { Helmet } from 'react-helmet-async';
 
 export const Route = createFileRoute("/finish_unit")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -23,6 +24,12 @@ function RouteComponent() {
 
   return (
     <div className="App">
+      <Helmet>
+        <title>Toki Pona Vocab Trainer</title>
+        <meta name="description" content="Lerne Toki Pona Vokabeln mit diesem interaktiven Vokabeltrainer!" />
+        <link rel="icon" href="/Toki-Pona-Trainer/imgs/Toki_pona.svg.png" />
+        <link rel="apple-touch-icon" href="/Toki-Pona-Trainer/imgs/Toki_pona.svg.png" />
+      </Helmet>
       <h1>You have finished learning the words of the unit {unit_name}</h1>
       <h2>You have learned the words:</h2>
       {/*displays all words with translation in an table*/}
