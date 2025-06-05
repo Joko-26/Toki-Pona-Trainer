@@ -1,13 +1,15 @@
-# Toki Pona Trainer is an simple vocable trainer website for the micro language Toki Pona.
-All the words and translations are stored in the `/src/routes/vocab.json` file and if the data struckture stays the same can be modified for other languages.
-# Getting Started
+# Toki Pona Trainer is an simple vocabulary trainer website for the micro language Toki Pona.
 
-To run this application:
+This website is made with Tanstack Router React for more informations on [TanStack documentation](https://tanstack.com) visit their website.
+
+### **Important:**
+All the words and translations are stored in the `/src/routes/vocab.json` file and if the data struckture stays the same can be modified for other languages.
+
+### The Branch `gh-pages` contains the build website and is online at [Toki Pona Trainer](https://joko-26.github.io/Toki-Pona-Trainer/).
+
+## To run this application run:
 
 ```bash
 npm install
 npm run start  
 ```
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
